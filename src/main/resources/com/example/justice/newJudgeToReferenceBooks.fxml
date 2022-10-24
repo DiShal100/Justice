@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="130.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.justice.JusticeController">
+   <children>
+      <TextField layoutX="117.0" layoutY="23.0" prefHeight="25.0" prefWidth="261.0" />
+      <Label layoutX="38.0" layoutY="27.0" text="ФИО судьи:" />
+      <TextField layoutX="117.0" layoutY="59.0" prefHeight="25.0" prefWidth="261.0" />
+      <Label layoutX="17.0" layoutY="63.0" text="Телефон судьи:" />
+      <ToolBar layoutX="248.0" layoutY="84.0" prefHeight="40.0" prefWidth="136.0">
+        <items>
+          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="ОК" />
+            <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Отмена" />
+        </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

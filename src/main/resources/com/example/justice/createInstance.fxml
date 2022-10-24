@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="220.0" prefWidth="220.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.justice.JusticeController">
+   <children>
+      <BorderPane prefHeight="220.0" prefWidth="220.0">
+         <center>
+            <VBox prefHeight="185.0" prefWidth="227.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar orientation="VERTICAL" prefHeight="185.0" prefWidth="225.0">
+                    <items>
+                      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Первая инстанция">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Апелляция">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="39.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Кассация">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="68.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Надзор (субъект)">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="97.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Надзор (Верховный суд РФ)">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                    </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="26.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" text="Закрыть" />
+              </items>
+            </ToolBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

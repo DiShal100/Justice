@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Добавить" />
+                <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Редактировать" />
+                <Button layoutX="83.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Удалить" />
+                <TextField prefHeight="25.0" prefWidth="272.0" promptText="Поиск">
+                    <tooltip>
+                        <Tooltip text="Поиск лица по делу" />
+                    </tooltip>
+                </TextField>
+            </items>
+        </ToolBar>
+    </top>
+   <center>
+      <ScrollPane prefHeight="371.0" prefWidth="614.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="600.0">
+               <children>
+                        <TableView prefHeight="360.0" prefWidth="600.0">
+                            <columns>
+                                <TableColumn prefWidth="59.0" text="Фамилия" />
+                                <TableColumn minWidth="0.0" prefWidth="31.0" text="Имя" />
+                                <TableColumn minWidth="0.0" prefWidth="64.0" text="Отчество" />
+                                <TableColumn minWidth="0.0" prefWidth="90.0" text="Раб. телефон" />
+                                <TableColumn minWidth="0.0" prefWidth="94.0" text="Моб. телефон" />
+                        <TableColumn minWidth="0.0" prefWidth="66.0" text="Эл. почта" />
+                        <TableColumn maxWidth="190.0" minWidth="0.0" prefWidth="71.0" text="Должность" />
+                        <TableColumn maxWidth="190.0" minWidth="0.0" prefWidth="104.0" text="Дата рождения" />
+                            </columns>
+                        </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
