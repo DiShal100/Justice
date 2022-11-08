@@ -9,7 +9,6 @@
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.justice.JusticeController">
    <children>
       <TextField layoutX="240.0" layoutY="35.0" prefHeight="25.0" prefWidth="274.0" promptText="Стадия процесса рассмотрения" />
@@ -25,7 +24,7 @@
       <ToolBar layoutX="520.0" layoutY="93.0" orientation="VERTICAL" prefHeight="66.0" prefWidth="37.0">
         <items>
           <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="+" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="X" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="24.0" text="X" />
         </items>
       </ToolBar>
       <ScrollBar layoutX="500.0" layoutY="95.0" orientation="VERTICAL" />

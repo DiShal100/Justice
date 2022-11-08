@@ -122,7 +122,7 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="729.0" prefWidth="955.0">
                      <children>
-                        <TableView prefHeight="715.0" prefWidth="942.0">
+                        <TableView layoutX="-1.0" prefHeight="715.0" prefWidth="942.0">
                            <columns>
                               <TableColumn prefWidth="103.0" text="Номер дела" />
                               <TableColumn prefWidth="83.0" text="Истцы" />

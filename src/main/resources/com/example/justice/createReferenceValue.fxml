@@ -16,8 +16,8 @@
       <Label layoutX="44.0" layoutY="113.0" text="Примечание:" />
       <ToolBar layoutY="360.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="601.0">
         <items>
-          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Отмена" />
-            <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="ОК" />
+          <Button fx:id="changesCANCELbtn" onAction="#changesCANCEL" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Отмена" />
+            <Button fx:id ="changesOKbtn" onAction="#changesOK" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="ОК" />
         </items>
       </ToolBar>
    </children>
