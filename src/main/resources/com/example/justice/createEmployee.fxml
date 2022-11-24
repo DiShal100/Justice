@@ -18,18 +18,16 @@
       <Label layoutX="102.0" layoutY="90.0" text="Имя:" />
       <Label layoutX="76.0" layoutY="129.0" text="Отчество:" />
       <DatePicker layoutX="138.0" layoutY="205.0" />
-      <ComboBox layoutX="138.0" layoutY="165.0" prefHeight="25.0" prefWidth="174.0" />
+      <ComboBox fx:id="genderEmployeeComboBox" layoutX="138.0" layoutY="165.0" prefHeight="25.0" prefWidth="174.0" />
       <Label layoutX="103.0" layoutY="169.0" text="Пол:" />
       <Label layoutX="40.0" layoutY="209.0" prefHeight="17.0" prefWidth="89.0" text="Дата рождения:" />
       <TextField layoutX="138.0" layoutY="245.0" prefHeight="25.0" prefWidth="294.0" />
       <TextField layoutX="138.0" layoutY="281.0" prefHeight="25.0" prefWidth="294.0" />
       <TextField layoutX="138.0" layoutY="320.0" prefHeight="25.0" prefWidth="294.0" />
-      <TextField layoutX="138.0" layoutY="357.0" prefHeight="25.0" prefWidth="294.0" />
       <Label layoutX="54.0" layoutY="249.0" prefHeight="17.0" prefWidth="79.0" text="Раб. телефон:" />
       <Label layoutX="49.0" layoutY="285.0" prefHeight="17.0" prefWidth="89.0" text="Моб. телефон:" />
       <Label layoutX="73.0" layoutY="324.0" prefHeight="17.0" prefWidth="60.0" text="Эл. почта:" />
       <Label layoutX="65.0" layoutY="361.0" prefHeight="17.0" prefWidth="67.0" text="Должность:" />
-      <Button layoutX="440.0" layoutY="357.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" text="..." />
       <TextArea layoutX="138.0" layoutY="394.0" prefHeight="134.0" prefWidth="294.0" />
       <ToolBar layoutY="560.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="503.0">
         <items>
@@ -38,5 +36,6 @@
         </items>
       </ToolBar>
       <Label layoutX="28.0" layoutY="394.0" prefHeight="17.0" prefWidth="102.0" text="Доп. информация:" />
+      <ComboBox fx:id="positionComboBox" layoutX="138.0" layoutY="357.0" prefHeight="25.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

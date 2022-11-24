@@ -8,6 +8,7 @@ module com.example.justice {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens com.example.justice to javafx.fxml;
     exports com.example.justice;

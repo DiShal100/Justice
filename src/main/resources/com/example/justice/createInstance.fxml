@@ -15,7 +15,7 @@
                <children>
                   <ToolBar orientation="VERTICAL" prefHeight="185.0" prefWidth="225.0">
                     <items>
-                      <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Первая инстанция">
+                      <Button fx:id="createFirstInstanceBtn" onAction="#createFirstInstance" mnemonicParsing="false" prefHeight="30.0" prefWidth="210.0" text="Первая инстанция">
                            <font>
                               <Font size="14.0" />
                            </font>

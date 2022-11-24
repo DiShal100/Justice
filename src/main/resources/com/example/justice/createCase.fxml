@@ -92,11 +92,11 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <Button fx:id = "jurisdictionBtn" onAction="#editJurisdiction" layoutX="470.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text=". . ." />
-                              <Button fx:id = "statusINcaseBtn" onAction="#editStatusINcase" layoutX="470.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text=". . ." />
-                              <Button fx:id="litigationTypeBtn" onAction="#editLitigationType" layoutX="470.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text=". . ." />
-                              <Button fx:id="LitigationSubjectBtn" onAction="#editLitigationSubject" layoutX="470.0" layoutY="220.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text=". . ." />
-                              <Button fx:id="CurrentCasestageBtn" onAction="#editCurrentCasestage" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text=". . ." />
+                              <Button fx:id="jurisdictionBtn" layoutX="470.0" layoutY="90.0" mnemonicParsing="false" onAction="#editJurisdiction" prefHeight="25.0" prefWidth="31.0" text=". . ." />
+                              <Button fx:id="statusINcaseBtn" layoutX="470.0" layoutY="155.0" mnemonicParsing="false" onAction="#editStatusINcase" prefHeight="25.0" prefWidth="31.0" text=". . ." />
+                              <Button fx:id="litigationTypeBtn" layoutX="470.0" layoutY="187.0" mnemonicParsing="false" onAction="#editLitigationType" prefHeight="25.0" prefWidth="31.0" text=". . ." />
+                              <Button fx:id="LitigationSubjectBtn" layoutX="470.0" layoutY="220.0" mnemonicParsing="false" onAction="#editLitigationSubject" prefHeight="25.0" prefWidth="31.0" text=". . ." />
+                              <Button fx:id="CurrentCasestageBtn" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" onAction="#editCurrentCasestage" prefHeight="25.0" prefWidth="31.0" text=". . ." />
                               <Separator layoutX="-8.0" layoutY="324.0" prefHeight="15.0" prefWidth="909.0" />
                               <Label layoutX="485.0" layoutY="339.0" text="Даты">
                                  <font>
@@ -139,39 +139,52 @@
                                     <Font size="14.0" />
                                  </font>
                               </Label>
-                              <TabPane layoutX="521.0" layoutY="31.0" prefHeight="297.0" prefWidth="365.0" tabClosingPolicy="UNAVAILABLE">
+                              <TabPane layoutX="521.0" layoutY="31.0" prefHeight="297.0" prefWidth="375.0" tabClosingPolicy="UNAVAILABLE">
                                 <tabs>
-                                  <Tab text="Истцы и ответчики">
+                                  <Tab text="Истцы">
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="365.0">
                                              <children>
-                                                <TextArea layoutX="14.0" layoutY="24.0" prefHeight="105.0" prefWidth="287.0" />
-                                                <Label layoutX="14.0" layoutY="4.0" text="Истцы">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label layoutX="14.0" layoutY="134.0" text="Ответчики">
-                                                   <font>
-                                                      <Font size="14.0" />
-                                                   </font>
-                                                </Label>
-                                                <TextArea layoutX="14.0" layoutY="153.0" prefHeight="108.0" prefWidth="287.0" />
-                                                <Button layoutX="320.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="+" />
-                                                <Button layoutX="320.0" layoutY="58.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="X" />
-                                                <Button layoutX="320.0" layoutY="153.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="+" />
-                                                <Button layoutX="320.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="X" />
+                                                <Button fx:id="addСlaimantBtn" layoutX="344.0" layoutY="27.0" mnemonicParsing="false" onAction="#addCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="+" />
+                                                <Button fx:id="deleteСlaimantBtn" layoutX="344.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="X" />
+                                                <TableView  prefHeight="260.0" prefWidth="340.0">
+                                                   <columns>
+                                                      <TableColumn  prefWidth="211.0" text="Краткое наименование / ФИО" />
+                                                      <TableColumn  prefWidth="118.0" text="ИНН" />
+                                                   </columns>
+                                                </TableView>
                                              </children>
                                           </AnchorPane>
                                     </content>
                                   </Tab>
+                                    <Tab text="Ответчики">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="237.0" prefWidth="301.0">
+                                             <children>
+                                                <Button fx:id="addDefendantBtn" layoutX="344.0" layoutY="27.0" mnemonicParsing="false" onAction="#addCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="+" />
+                                                <Button fx:id="deleteDefendantBtn" layoutX="344.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="X" />
+                                                <TableView fx:id="caseParticipantTableView" prefHeight="260.0" prefWidth="340.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="shortNameParticipantColumn" prefWidth="211.0" text="Краткое наименование / ФИО" />
+                                                      <TableColumn fx:id="innParticipantColumn" prefWidth="118.0" text="ИНН" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
                                   <Tab text="Заинт. лица">
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                              <children>
-                                                <TextArea layoutX="8.0" layoutY="7.0" prefHeight="255.0" prefWidth="299.0" />
-                                                <Button layoutX="320.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="+" />
-                                                <Button layoutX="320.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="X" />
+                                                <Button fx:id="addStakeholderBtn" layoutX="344.0" layoutY="27.0" mnemonicParsing="false" onAction="#addCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="+" />
+                                                <Button fx:id="deleteStakeholderBtn" layoutX="344.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="X" />
+                                                <TableView prefHeight="260.0" prefWidth="340.0">
+                                                   <columns>
+                                                      <TableColumn prefWidth="211.0" text="Краткое наименование / ФИО" />
+                                                      <TableColumn prefWidth="118.0" text="ИНН" />
+                                                   </columns>
+                                                </TableView>
                                              </children>
                                           </AnchorPane>
                                     </content>
@@ -180,9 +193,14 @@
                                        <content>
                                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="237.0" prefWidth="301.0">
                                              <children>
-                                                <TextArea layoutX="8.0" layoutY="7.0" prefHeight="255.0" prefWidth="299.0" />
-                                                <Button layoutX="320.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="+" />
-                                                <Button layoutX="320.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" text="X" />
+                                                <Button fx:id="addThirdPersonBtn" layoutX="344.0" layoutY="27.0" mnemonicParsing="false" onAction="#addCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="+" />
+                                                <Button fx:id="deleteThirdPersonBtn" layoutX="344.0" layoutY="58.0" mnemonicParsing="false" onAction="#deleteCaseParticipants" prefHeight="25.0" prefWidth="31.0" text="X" />
+                                                <TableView prefHeight="260.0" prefWidth="340.0">
+                                                   <columns>
+                                                      <TableColumn prefWidth="211.0" text="Краткое наименование / ФИО" />
+                                                      <TableColumn prefWidth="118.0" text="ИНН" />
+                                                   </columns>
+                                                </TableView>
                                              </children>
                                           </AnchorPane>
                                        </content>
@@ -199,15 +217,15 @@
                            <children>
                               <ToolBar prefHeight="40.0" prefWidth="900.0">
                                 <items>
-                                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Добавить" />
+                                  <Button fx:id="createInstanceBtn" onAction="#createInstance" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Добавить" />
                                     <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Редактировать" />
                                     <Button layoutX="83.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Удалить" />
                                 </items>
                               </ToolBar>
-                              <TableView layoutX="-1.0" layoutY="40.0" prefHeight="530.0" prefWidth="900.0">
+                              <TableView fx:id="CourtInstanceTableView" layoutX="-1.0" layoutY="40.0" prefHeight="530.0" prefWidth="900.0">
                                 <columns>
-                                  <TableColumn prefWidth="213.0" text="Наименование инстанции" />
-                                  <TableColumn prefWidth="198.0" text="Наименование суда" />
+                                  <TableColumn fx:id="instanceNameColumn" prefWidth="213.0" text="Наименование инстанции" />
+                                  <TableColumn fx:id="nameCourtInstanceColumn" prefWidth="198.0" text="Наименование суда" />
                                 </columns>
                               </TableView>
                            </children>
@@ -234,40 +252,52 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TabPane layoutX="22.0" layoutY="20.0" prefHeight="238.0" prefWidth="409.0" tabClosingPolicy="UNAVAILABLE">
+                              <TabPane layoutX="6.0" layoutY="20.0" prefHeight="507.0" prefWidth="886.0" tabClosingPolicy="UNAVAILABLE">
                                 <tabs>
-                                  <Tab text="Исполнители">
+                                  <Tab text="Исполнитель">
                                     <content>
                                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="237.0" prefWidth="409.0">
                                              <children>
-                                                <TextArea layoutY="-1.0" prefHeight="173.0" prefWidth="410.0" />
-                                                <ToolBar layoutY="169.0" prefHeight="40.0" prefWidth="410.0">
-                                                  <items>
-                                                    <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Добавить" />
-                                                      <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Удалить" />
-                                                  </items>
-                                                </ToolBar>
-                                                <ScrollBar layoutX="388.0" orientation="VERTICAL" prefHeight="171.0" prefWidth="20.0" />
+                                              <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Добавить" />
+                                                <Button layoutX="94.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Удалить" />
+                                                <TableView layoutX="7.0" layoutY="39.0" prefHeight="440.0" prefWidth="875.0">
+                                                  <columns>
+                                                    <TableColumn prefWidth="75.0" text="Фамилия" />
+                                                    <TableColumn prefWidth="75.0" text="Имя" />
+                                                      <TableColumn prefWidth="84.0" text="Отчество" />
+                                                      <TableColumn prefWidth="141.0" text="Дата рождения" />
+                                                      <TableColumn prefWidth="104.0" text="Должность" />
+                                                      <TableColumn prefWidth="131.0" text="Электронная почта" />
+                                                      <TableColumn prefWidth="131.0" text="Раб. телефон" />
+                                                      <TableColumn prefWidth="131.0" text="Моб. телефон" />
+                                                  </columns>
+                                                </TableView>
                                              </children>
                                           </AnchorPane>
                                     </content>
                                   </Tab>
-                                  <Tab text="Соисполнители">
-                                    <content>
-                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <Tab text="Соисполнитель">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="237.0" prefWidth="409.0">
                                              <children>
-                                                <TextArea prefHeight="173.0" prefWidth="410.0" />
-                                                <ToolBar layoutY="169.0" prefHeight="40.0" prefWidth="410.0">
-                                                   <items>
-                                                      <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Добавить" />
-                                                      <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Удалить" />
-                                                   </items>
-                                                </ToolBar>
-                                                <ScrollBar layoutX="389.0" layoutY="1.0" orientation="VERTICAL" prefHeight="171.0" prefWidth="20.0" />
+                                                <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Добавить" />
+                                                <Button layoutX="94.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Удалить" />
+                                                <TableView layoutX="7.0" layoutY="39.0" prefHeight="440.0" prefWidth="875.0">
+                                                   <columns>
+                                                      <TableColumn prefWidth="75.0" text="Фамилия" />
+                                                      <TableColumn prefWidth="75.0" text="Имя" />
+                                                      <TableColumn prefWidth="84.0" text="Отчество" />
+                                                      <TableColumn prefWidth="141.0" text="Дата рождения" />
+                                                      <TableColumn prefWidth="104.0" text="Должность" />
+                                                      <TableColumn prefWidth="131.0" text="Электронная почта" />
+                                                      <TableColumn prefWidth="131.0" text="Раб. телефон" />
+                                                      <TableColumn prefWidth="131.0" text="Моб. телефон" />
+                                                   </columns>
+                                                </TableView>
                                              </children>
                                           </AnchorPane>
-                                    </content>
-                                  </Tab>
+                                       </content>
+                                    </Tab>
                                 </tabs>
                               </TabPane>
                            </children>
@@ -292,21 +322,8 @@
                               </ScrollPane>
                               <ToolBar layoutX="1.0" prefHeight="40.0" prefWidth="900.0">
                                 <items>
-                                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="+">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Button>
-                                    <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="...">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Button>
-                                    <Button layoutX="66.0" layoutY="13.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="X">
-                                       <font>
-                                          <Font size="14.0" />
-                                       </font>
-                                    </Button>
+                                  <Button fx:id="addHistoricalRecordBtn" onAction="#addHistoricalRecord" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Добавить" />
+                                    <Button fx:id="deleteHistoricalRecordBtn" onAction="#deleteHistoricalRecord" layoutX="66.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Удалить" />
                                 </items>
                               </ToolBar>
                            </children></AnchorPane>
@@ -318,9 +335,9 @@
          <bottom>
             <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="604.0" BorderPane.alignment="CENTER">
               <items>
-                <Button fx:id = "changesAPPLYbtn" onAction="#changesAPPLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Применить" />
-                  <Button fx:id = "changesCANCELbtn" onAction="#changesCANCEL" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Отмена" />
-                  <Button fx:id = "changesOKbtn" onAction="#changesOK" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="ОК" />
+                <Button fx:id="changesAPPLYbtn" mnemonicParsing="false" onAction="#changesAPPLY" prefHeight="25.0" prefWidth="80.0" text="Применить" />
+                  <Button fx:id="changesCANCELbtn" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#changesCANCEL" prefHeight="25.0" prefWidth="80.0" text="Отмена" />
+                  <Button fx:id="changesOKbtn" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#changesOK" prefHeight="25.0" prefWidth="80.0" text="ОК" />
               </items>
             </ToolBar>
          </bottom>

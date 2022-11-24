@@ -10,14 +10,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="viewParticipantsCase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.justice.JusticeController">
    <top>
       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
-          <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Добавить" />
+          <Button fx:id="createCaseParticipantsBtn" mnemonicParsing="false" onAction="#createCaseParticipants" prefHeight="25.0" prefWidth="100.0" text="Добавить" />
             <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Редактировать" />
             <Button layoutX="83.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Удалить" />
-            <TextField prefHeight="25.0" prefWidth="272.0" promptText="Поиск лица по делу">
+            <TextField prefHeight="25.0" prefWidth="272.0" promptText="Поиск участника">
                <tooltip>
                   <Tooltip text="Поиск лица по делу" />
                </tooltip>
@@ -30,13 +30,13 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="600.0">
                <children>
-                  <TableView prefHeight="345.0" prefWidth="585.0">
+                  <TableView fx:id="caseParticipantTableView" prefHeight="345.0" prefWidth="585.0">
                     <columns>
-                      <TableColumn prefWidth="159.0" text="Краткое наименование" />
-                      <TableColumn minWidth="0.0" prefWidth="158.0" text="Полное наименование" />
-                        <TableColumn minWidth="0.0" prefWidth="110.0" text="Тип лица" />
-                        <TableColumn minWidth="0.0" prefWidth="58.0" text="ИНН" />
-                        <TableColumn minWidth="0.0" prefWidth="135.0" text="Адрес" />
+                      <TableColumn fx:id="shortNameParticipantColumn" prefWidth="159.0" text="Краткое наименование / ФИО" />
+                      <TableColumn fx:id="fullNameParticipantColumn" minWidth="0.0" prefWidth="158.0" text="Полное наименование / ФИО" />
+                        <TableColumn fx:id="typePersonParticipantColumn" minWidth="0.0" prefWidth="110.0" text="Тип лица" />
+                        <TableColumn fx:id="innParticipantColumn" minWidth="0.0" prefWidth="58.0" text="ИНН" />
+                        <TableColumn fx:id="addressParticipantColumn" minWidth="0.0" prefWidth="135.0" text="Адрес" />
                     </columns>
                   </TableView>
                </children>

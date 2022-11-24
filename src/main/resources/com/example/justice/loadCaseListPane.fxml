@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -14,17 +15,17 @@
          <content>
             <BorderPane prefHeight="700.0" prefWidth="1200.0">
                <center>
-                  <TableView prefHeight="700.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+                  <TableView fx:id="caseList" prefHeight="700.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
                     <columns>
-                      <TableColumn prefWidth="99.0" text="Номер дела" />
-                      <TableColumn prefWidth="95.0" text="Истцы" />
-                        <TableColumn minWidth="3.0" prefWidth="92.0" text="Ответчики" />
-                        <TableColumn prefWidth="122.0" text="Вид спора" />
-                        <TableColumn prefWidth="125.0" text="Предмет спора" />
-                        <TableColumn prefWidth="269.0" text="Суд" />
-                        <TableColumn prefWidth="101.0" text="Стадия дела" />
-                        <TableColumn prefWidth="147.0" text="Инстанция" />
-                        <TableColumn prefWidth="126.0" text="Сумма иска" />
+                      <TableColumn fx:id="caseNumberColumn" prefWidth="99.0" text="Номер дела" />
+                      <TableColumn fx:id="claimantsColumn" prefWidth="95.0" text="Истцы" />
+                        <TableColumn fx:id="defendantsColumn" minWidth="3.0" prefWidth="92.0" text="Ответчики" />
+                        <TableColumn fx:id="litigationTypeColumn" prefWidth="122.0" text="Вид спора" />
+                        <TableColumn fx:id="litigationSubjectColumn" prefWidth="125.0" text="Предмет спора" />
+                        <TableColumn fx:id="courtNameColumn" prefWidth="269.0" text="Суд" />
+                        <TableColumn fx:id="stagesOfCaseColumn" prefWidth="101.0" text="Стадия дела" />
+                        <TableColumn fx:id="instanceColumn" prefWidth="147.0" text="Инстанция" />
+                        <TableColumn fx:id="claimSumColumn" prefWidth="126.0" text="Сумма иска" />
                     </columns>
                   </TableView>
                </center>
@@ -39,6 +40,9 @@
             <Button fx:id="editCase" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#editCase" prefHeight="25.0" prefWidth="130.0" text="Редактировать дело" />
             <Button fx:id="deleteCase" layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#deleteCase" prefHeight="25.0" prefWidth="130.0" text="Удалить дело" />
             <TextField fx:id="caseSearch" onAction="#caseSearch" prefHeight="25.0" prefWidth="339.0" promptText="Поиск дела..." />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="47.0" />
+            <Button layoutX="806.0" layoutY="13.0" mnemonicParsing="false" text="Перенести в архив" />
+            <Separator layoutX="930.0" layoutY="10.0" orientation="VERTICAL" prefHeight="0.0" prefWidth="47.0" />
         </items>
       </ToolBar>
    </top>

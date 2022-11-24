@@ -10,14 +10,14 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.justice.JusticeController">
    <children>
-      <TextField layoutX="123.0" layoutY="60.0" prefHeight="25.0" prefWidth="463.0" />
-      <TextArea layoutX="123.0" layoutY="113.0" prefHeight="221.0" prefWidth="463.0" />
+      <TextField fx:id="name_ReferenceValue" layoutX="123.0" layoutY="60.0" prefHeight="25.0" prefWidth="463.0" />
+      <TextArea fx:id="note_ReferenceValue" layoutX="123.0" layoutY="113.0" prefHeight="221.0" prefWidth="463.0" />
       <Label layoutX="31.0" layoutY="64.0" text="Наименование:" />
       <Label layoutX="44.0" layoutY="113.0" text="Примечание:" />
       <ToolBar layoutY="360.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="601.0">
         <items>
           <Button fx:id="changesCANCELbtn" onAction="#changesCANCEL" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Отмена" />
-            <Button fx:id ="changesOKbtn" onAction="#changesOK" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="ОК" />
+            <Button fx:id ="createReferenceValueOKBtn" onAction="#insertReferenceValue" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="ОК" />
         </items>
       </ToolBar>
    </children>
